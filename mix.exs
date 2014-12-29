@@ -12,7 +12,7 @@ defmodule Destino.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:httpoison, :logger]]
   end
 
   # Dependencies can be Hex packages:
@@ -25,6 +25,7 @@ defmodule Destino.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:sugar, github: "sugar-framework/sugar"}]
+    [{:sugar, github: "sugar-framework/sugar"},
+     {:httpoison, "~> 0.5"}]
   end
 end
