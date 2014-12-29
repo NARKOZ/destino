@@ -25,6 +25,6 @@ defmodule Destino.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    []
+    [{:sugar, github: "sugar-framework/sugar"}]
   end
 end
