@@ -13,4 +13,5 @@ defmodule Router do
 
   # Define your routes here
   get "/", Destino.Controllers.Main, :index
+  get "/:gem", Destino.Controllers.Main, :index
 end
