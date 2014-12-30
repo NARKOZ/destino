@@ -26,6 +26,7 @@ defmodule Destino.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [{:sugar, github: "sugar-framework/sugar"},
-     {:httpoison, "~> 0.5"}]
+     {:httpoison, "~> 0.5"},
+     {:exjsx, "~> 3.1.0"}]
   end
 end
