@@ -1,9 +1,27 @@
 <!doctype html>
-<html lang="en-US">
+<html>
 <head>
-  <title>main/index - Destino</title>
+    <meta charset="utf-8">
+    <title>Destino</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-family: monospace;
+        padding : 10px 30px;
+      }
+      p { white-space: pre; }
+    </style>
 </head>
 <body>
-  Hello World
+  <h1>Destino</h1>
+  <h3>Redirect to a Ruby gem's GitHub page, if available.</h3>
+  <p>
+      Usage : GET /<strong>&lt;gem-name&gt;</strong>
+
+    Example : GET <a href="/git-revision">/git-revision</a>
+  </p>
+  <p>
+    ^__^ <a href="https://github.com/narkoz/destino">Source</a>
+  </p>
 </body>
 </html>
