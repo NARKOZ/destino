@@ -13,10 +13,17 @@ defmodule Destino.Controllers.Main do
   # TODO: check if github page really exists
   defp gem_page(gem) do
     api_url = "https://rubygems.org/api/v1/gems/#{gem}.json"
-    json = HTTPoison.get!(api_url).body |> JSX.decode!
-    repo = get_repo_name(json["homepage_uri"]) || get_repo_name(json["source_code_uri"])
+    response = HTTPoison.get! api_url
 
-    if is_nil(repo), do: json["project_uri"], else: "https://github.com/#{repo}"
+    if response.status_code == 404 do
+      # redirect to rubygems 404 page
+      "https://rubygems.org/gems/#{gem}"
+    else
+      json = JSX.decode! response.body
+      repo = get_repo_name(json["homepage_uri"]) || get_repo_name(json["source_code_uri"])
+
+      if is_nil(repo), do: json["project_uri"], else: "https://github.com/#{repo}"
+    end
   end
 
   # Extracts full repo name from github url
