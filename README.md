@@ -2,6 +2,8 @@
 
 Web service to redirect to a Ruby gem's GitHub or RubyGems.org project page.
 
+**Crafted specially for [Crank](https://github.com/NARKOZ/crank-for-rubygems)!**
+
 ## Usage
 
 Send a `GET` request to http://sla.herokuapp.com/ `<gem-name>`
@@ -36,6 +38,6 @@ To run test suite:
 mix test
 ```
 
----
+## License
 
-**Crafted specially for [Crank](https://github.com/NARKOZ/crank-for-rubygems)!**
+Released under the BSD 2-clause license. See LICENSE.txt for details.
