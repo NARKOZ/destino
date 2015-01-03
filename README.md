@@ -1,6 +1,6 @@
 # Destino
 
-Web service to redirect to a Ruby gem's GitHub or RubyGems.org project page.
+Web service that redirects to a Ruby gem's GitHub or RubyGems.org project page.
 
 **Crafted specially for [Crank](https://github.com/NARKOZ/crank-for-rubygems)!**
 
